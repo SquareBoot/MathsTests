@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="squareboot.mathstests.RuffiniActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/ClearRuffini"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:onClick="clearRuffini"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/Sixth_monomial_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/Sixth_monomial_label_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Sixth_monomial_Ruffini"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toEndOf="@+id/Sixth_monomial_Ruffini"
+                        android:layout_toRightOf="@+id/Sixth_monomial_Ruffini"
+                        android:text="x⁶ +"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/Fifth_monomial_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/Sixth_monomial_label_Ruffini"
+                        android:layout_toRightOf="@+id/Sixth_monomial_label_Ruffini"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/Fifth_monomial_label_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/Sixth_monomial_label_Ruffini"
+                        android:layout_toEndOf="@+id/Fifth_monomial_Ruffini"
+                        android:layout_toRightOf="@+id/Fifth_monomial_Ruffini"
+                        android:text="x⁵ +"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/Fourth_monomial_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/Fifth_monomial_label_Ruffini"
+                        android:layout_toRightOf="@+id/Fifth_monomial_label_Ruffini"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/Fourth_monomial_label_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Fifth_monomial_label_Ruffini"
+                        android:layout_toEndOf="@+id/Fourth_monomial_Ruffini"
+                        android:layout_toRightOf="@+id/Fourth_monomial_Ruffini"
+                        android:text="x⁴ +"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/Third_monomial_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Fourth_monomial_Ruffini"
+                        android:layout_toEndOf="@+id/Fourth_monomial_label_Ruffini"
+                        android:layout_toRightOf="@+id/Fourth_monomial_label_Ruffini"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/Third_monomial_label_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Fourth_monomial_label_Ruffini"
+                        android:layout_toEndOf="@+id/Third_monomial_Ruffini"
+                        android:layout_toRightOf="@+id/Third_monomial_Ruffini"
+                        android:text="x³ +"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/Second_monomial_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Third_monomial_Ruffini"
+                        android:layout_toEndOf="@+id/Third_monomial_label_Ruffini"
+                        android:layout_toRightOf="@+id/Third_monomial_label_Ruffini"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/Second_monomial_label_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Third_monomial_label_Ruffini"
+                        android:layout_toEndOf="@+id/Second_monomial_Ruffini"
+                        android:layout_toRightOf="@+id/Second_monomial_Ruffini"
+                        android:text="x² +"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/First_monomial_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Second_monomial_Ruffini"
+                        android:layout_toEndOf="@+id/Second_monomial_label_Ruffini"
+                        android:layout_toRightOf="@+id/Second_monomial_label_Ruffini"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/First_monomial_label_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Second_monomial_label_Ruffini"
+                        android:layout_toEndOf="@+id/First_monomial_Ruffini"
+                        android:layout_toRightOf="@+id/First_monomial_Ruffini"
+                        android:text="x+"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/Zero_Ruffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Second_monomial_Ruffini"
+                        android:layout_marginRight="16dp"
+                        android:layout_toEndOf="@+id/First_monomial_label_Ruffini"
+                        android:layout_toRightOf="@+id/First_monomial_label_Ruffini"
+                        android:hint="     "
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/Calculate_Ruffini"
+                android:layout_width="130dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/horizontalScrollView"
+                android:onClick="calculateRuffini"
+                android:text="Calculate" />
+
+            <TextView
+                android:id="@+id/PolynomialZeroLabelRuffini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/PolynomialZeroRuffini"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="8dp"
+                android:paddingRight="10dp"
+                android:text="Zero:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/PolynomialZeroRuffini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/Calculate_Ruffini"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/PolynomialZeroLabelRuffini"
+                android:layout_toRightOf="@+id/PolynomialZeroLabelRuffini"
+                android:inputType="numberSigned"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/ruffini_table_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PolynomialZeroRuffini"
+                android:layout_marginTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <squareboot.mathstests.RuffiniView
+                        android:id="@+id/ruffini_table"
+                        android:layout_width="600dp"
+                        android:layout_height="200dp" />
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/ResultLabelRuffini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ResultRuffini"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingBottom="8dp"
+                android:paddingRight="10dp"
+                android:text="Result:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/ResultRuffini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ruffini_table_container"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/ResultLabelRuffini"
+                android:inputType="numberSigned"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

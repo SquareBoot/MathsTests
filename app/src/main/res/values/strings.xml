@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MathsTests</string>
+
+    <!-- Powers -->
+    <string name="power_2">²</string>
+    <string name="power_3">³</string>
+    <string name="power_4">⁴</string>
+    <string name="power_5">⁵</string>
+    <string name="power_6">⁶</string>
+
+    <string name="empty_hint">     </string>
+
+    <!-- Spinner items -->
+    <string-array name="operations_array">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+    </string-array>
+</resources>

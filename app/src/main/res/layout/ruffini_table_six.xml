@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_column="2"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/table_item_6"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="4"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_5"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="5"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_4"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="6"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_3"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="7"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_2"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="8"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_1"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="9"
+            android:text="0"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_column="10"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/table_item_0"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="11"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="5dp"
+            android:layout_column="2"
+            android:background="#bdbdbd" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="5dp"
+            android:layout_column="10"
+            android:background="#bdbdbd" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/table_item_zero"
+            android:layout_column="0"
+            android:text="0"
+            android:layout_height="16dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_column="2"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/table_item_m5"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="5"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_m4"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="6"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_m3"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="7"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_m2"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="8"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_m1"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="9"
+            android:text="0"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_column="10"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/table_item_m0"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="11"
+            android:text="0"
+            android:layout_marginLeft="2dp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="0" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:layout_column="2"
+            android:background="#bdbdbd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="3" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="4" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="5" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="6" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="7" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="8" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="9" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="10" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:background="#bdbdbd"
+            android:layout_column="11" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_column="2"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/table_item_a6"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="4"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_a5"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="5"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_a4"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="6"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_a3"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="7"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_a2"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="8"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp" />
+
+        <TextView
+            android:id="@+id/table_item_a1"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="9"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="16dp"
+            android:layout_column="10"
+            android:background="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/table_item_a0"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_column="11"
+            android:text="0"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp" />
+
+    </TableRow>
+</TableLayout>
