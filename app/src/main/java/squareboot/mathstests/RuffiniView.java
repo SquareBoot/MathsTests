@@ -126,15 +126,18 @@ public class RuffiniView extends View {
 
             if (table.size() != 0) {
                 placeTxt(0, 1, CELL_SPACE, 2 * CELL_HEIGHT + CELL_SPACE, canvas);
-                placeTxt(1, 2, CELL_WIDTH + 2 * CELL_SPACE, 0, canvas);
+                placeTxt(1, 2, CELL_WIDTH + 2 * CELL_SPACE, PADDING, canvas);
                 placeTxt(1, 0, CELL_WIDTH + 2 * CELL_SPACE, 3 * CELL_HEIGHT + 2 * CELL_SPACE, canvas);
 
-                //TEST
-                /*for (int index = 2; index <= (grade + 1); index++) {
-                    for (int i2 = 0; i2 <= 2; i2++) {
-                        placeTxt(index, i2, index * 20, i2 * 20, canvas);
-                    }
-                }*/
+                for (int index = 2; index <= grade; index++) {
+                    placeTxt(index, 2, index * CELL_WIDTH + (index + 1) * CELL_SPACE, PADDING, canvas);
+                    placeTxt(index, 1, index * CELL_WIDTH + (index + 1) * CELL_SPACE, 2 * CELL_HEIGHT + CELL_SPACE, canvas);
+                    placeTxt(index, 0, index * CELL_WIDTH + (index + 1) * CELL_SPACE, 3 * CELL_HEIGHT + 2 * CELL_SPACE, canvas);
+                }
+
+                placeTxt(grade + 1, 2, (grade + 1) * CELL_WIDTH + (grade + 3) * CELL_SPACE, PADDING, canvas);
+                placeTxt(grade + 1, 1, (grade + 1) * CELL_WIDTH + (grade + 3) * CELL_SPACE, 2 * CELL_HEIGHT + CELL_SPACE, canvas);
+                placeTxt(grade + 1, 0, (grade + 1) * CELL_WIDTH + (grade + 3) * CELL_SPACE, 3 * CELL_HEIGHT + 2 * CELL_SPACE, canvas);
 
             } else {
                 canvas.drawText("Table not available.", getWidth() / 2, getHeight() / 2, errorPaint);
@@ -162,12 +165,14 @@ public class RuffiniView extends View {
     void restoreTable() {
         table.clear();
 
-        ArrayList<String> temp = new ArrayList<>();
-        for (int index = 0; index <= 2; index++) {
-            temp.add("");
-        }
-
         for (int i = 0; i <= 7; i++) {
+            //NOTE: do not put the following lines of code before the for statement
+            ArrayList<String> temp = new ArrayList<>();
+            for (int index = 0; index <= 2; index++) {
+                temp.add("");
+            }
+            //Why? All the ArrayLists in table will be "temp": referring to one of them will change all the lists in the table.
+
             table.add(temp);
         }
     }
