@@ -11,13 +11,13 @@ public class Fraction {
     private int fractionDenominator;
 
 
-    public Fraction(int numerator, int denominator) throws FractionException {
+    public Fraction(int numerator, int denominator) throws ArithmeticException {
         this(numerator, denominator, true);
     }
 
-    public Fraction(int numerator, int denominator, boolean reduce) throws FractionException {
+    public Fraction(int numerator, int denominator, boolean reduce) throws ArithmeticException {
         if (denominator == 0) {
-            throw (new FractionException());
+            throw (new ArithmeticException("Invalid fraction! Denominator can't be 0!"));
         }
         fractionNumerator = numerator;
         fractionDenominator = denominator;
@@ -36,7 +36,7 @@ public class Fraction {
         this(0);
     }
 
-    public Fraction(Fraction other) throws FractionException {
+    public Fraction(Fraction other) throws ArithmeticException {
         this(other.getNumerator(), other.getDenominator());
     }
 
@@ -49,7 +49,7 @@ public class Fraction {
         return new Fraction(Integer.parseInt(number));
     }
 
-    public static Fraction pow(Fraction fraction, int y) throws FractionException {
+    public static Fraction pow(Fraction fraction, int y) throws ArithmeticException {
         String tempTag = "(" + fraction.toString() + ")^" + String.valueOf(y) + " = ";
 
         if (!fraction.isZero()) {
@@ -61,7 +61,7 @@ public class Fraction {
         return new Fraction();
     }
 
-    public static Fraction addiction(Fraction a, Fraction b) throws FractionException {
+    public static Fraction addiction(Fraction a, Fraction b) throws ArithmeticException {
         if ((a.isZero()) && (b.isZero())) {
             return new Fraction();
 
@@ -77,7 +77,7 @@ public class Fraction {
         }
     }
 
-    public static Fraction subtraction(Fraction a, Fraction b) throws FractionException {
+    public static Fraction subtraction(Fraction a, Fraction b) throws ArithmeticException {
         if ((a.isZero()) && (b.isZero())) {
             return new Fraction();
 
@@ -93,7 +93,7 @@ public class Fraction {
         }
     }
 
-    public static Fraction multiplication(Fraction a, Fraction b) throws FractionException {
+    public static Fraction multiplication(Fraction a, Fraction b) throws ArithmeticException {
         if ((a.isZero()) || (b.isZero())) {
             return new Fraction();
 
@@ -102,7 +102,7 @@ public class Fraction {
         }
     }
 
-    public static Fraction division(Fraction a, Fraction b) throws FractionException {
+    public static Fraction division(Fraction a, Fraction b) throws ArithmeticException {
         if ((a.isZero()) || (b.isZero())) {
             return new Fraction();
 
@@ -187,9 +187,9 @@ public class Fraction {
         }
     }
 
-    public int toInt() throws FractionException {
+    public int toInt() throws ArithmeticException {
         if (fractionDenominator == 0) {
-            throw (new FractionException());
+            throw (new ArithmeticException("Invalid fraction! Denominator can't be 0!"));
         }
 
         if ((fractionNumerator % fractionDenominator) == 0) {
@@ -201,9 +201,9 @@ public class Fraction {
         return (fractionNumerator / fractionDenominator);
     }
 
-    public float toFloat() throws FractionException {
+    public float toFloat() throws ArithmeticException {
         if (fractionDenominator == 0) {
-            throw (new FractionException());
+            throw (new ArithmeticException("Invalid fraction! Denominator can't be 0!"));
         }
         return ((float) fractionNumerator / (float) fractionDenominator);
     }

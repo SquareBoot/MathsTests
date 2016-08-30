@@ -213,13 +213,12 @@
                 android:layout_alignBottom="@+id/PolynomialZeroRuffini"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:paddingBottom="8dp"
                 android:paddingRight="10dp"
                 android:text="Zero:"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/black" />
 
-            <EditText
+            <TextView
                 android:id="@+id/PolynomialZeroRuffini"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -234,11 +233,13 @@
                 android:textSize="24sp" />
 
             <HorizontalScrollView
-                android:id="@+id/ruffini_table_container"
+                android:id="@+id/ruffini_result_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/PolynomialZeroRuffini"
-                android:layout_marginTop="16dp">
+                android:layout_marginBottom="70dp"
+                android:layout_marginTop="16dp"
+                android:fillViewport="false">
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -248,34 +249,36 @@
                         android:id="@+id/ruffini_table"
                         android:layout_width="600dp"
                         android:layout_height="200dp" />
+
+                    <TextView
+                        android:id="@+id/ResultLabelRuffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/ResultRuffini"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingRight="10dp"
+                        android:text="Result:"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/ResultRuffini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/ruffini_table"
+                        android:layout_marginTop="16dp"
+                        android:layout_toEndOf="@+id/ResultLabelRuffini"
+                        android:layout_toRightOf="@+id/ResultLabelRuffini"
+                        android:inputType="numberSigned"
+                        android:minWidth="40dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="16dp" />
                 </RelativeLayout>
             </HorizontalScrollView>
 
-            <TextView
-                android:id="@+id/ResultLabelRuffini"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/ResultRuffini"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:paddingBottom="8dp"
-                android:paddingRight="10dp"
-                android:text="Result:"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black" />
-
-            <EditText
-                android:id="@+id/ResultRuffini"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/ruffini_table_container"
-                android:layout_marginTop="16dp"
-                android:layout_toRightOf="@+id/ResultLabelRuffini"
-                android:inputType="numberSigned"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

@@ -38,6 +38,7 @@ public class RuffiniView extends View {
     Paint errorPaint;
 
     ArrayList<ArrayList<String>> table = new ArrayList<>();
+    String result = "Tap Calculate to refresh.";
 
     int grade;
 
@@ -57,7 +58,7 @@ public class RuffiniView extends View {
         errorPaint.setTextSize(ERROR_TEXT_SIZE);
     }
 
-    void setEntries(Fraction zero, ArrayList<Integer> polynomial) throws PolynomialGradeException {
+    void setEntries(Fraction zero, ArrayList<Integer> polynomial) throws NullPointerException {
         try {
             restoreTable();
             shapes.clear();
@@ -86,6 +87,71 @@ public class RuffiniView extends View {
                 setItem((grade + 1) - index, 0, temp);
             }
 
+            ArrayList<String> powersIds = new ArrayList<>();
+            powersIds.add(getRes(R.string.power_2));    //0
+            powersIds.add(getRes(R.string.power_3));    //1
+            powersIds.add(getRes(R.string.power_4));    //2
+            powersIds.add(getRes(R.string.power_5));    //3
+
+            result = "(";
+
+            switch (grade) {
+                case 6: {
+                    result = result + getItem(1, 0) + "x" + powersIds.get(3);
+                    result = result + " + " + getItem(2, 0) + "x" + powersIds.get(2);
+                    result = result + " + " + getItem(3, 0) + "x" + powersIds.get(1);
+                    result = result + " + " + getItem(4, 0) + "x" + powersIds.get(0);
+                    result = result + " + " + getItem(5, 0) + "x";
+                    result = result + " + " + getItem(6, 0);
+                    break;
+                }
+
+                case 5: {
+                    result = result + getItem(1, 0) + "x" + powersIds.get(2);
+                    result = result + " + " + getItem(2, 0) + "x" + powersIds.get(1);
+                    result = result + " + " + getItem(3, 0) + "x" + powersIds.get(0);
+                    result = result + " + " + getItem(4, 0) + "x";
+                    result = result + " + " + getItem(5, 0);
+                    break;
+                }
+
+                case 4: {
+                    result = result + getItem(1, 0) + "x" + powersIds.get(1);
+                    result = result + " + " + getItem(2, 0) + "x" + powersIds.get(0);
+                    result = result + " + " + getItem(3, 0) + "x";
+                    result = result + " + " + getItem(4, 0);
+                    break;
+                }
+
+                case 3: {
+                    result = result + getItem(1, 0) + "x" + powersIds.get(0);
+                    result = result + " + " + getItem(2, 0) + "x";
+                    result = result + " + " + getItem(3, 0);
+                    break;
+                }
+
+                case 2: {
+                    result = result + getItem(1, 0) + "x";
+                    result = result + " + " + getItem(2, 0);
+                    break;
+                }
+
+                case 1: {
+                    result = result + getItem(1, 0);
+                    break;
+                }
+            }
+
+            result = result + ") * (x";
+            if (zero.toString().startsWith("-")) {
+                result = result + " + " + zero.toString().replace("-", "") + ")";
+
+            } else {
+                result = result + " + " + zero.toString()  + ")";
+            }
+
+            invalidate();
+
         } catch (Exception e) {
             //Error log
             Log.e(TAG + "log", "► Error:");
@@ -96,8 +162,6 @@ public class RuffiniView extends View {
             table.clear();
             shapes.clear();
         }
-
-        invalidate();
     }
 
     ShapeDrawable createNewShape(int x, int y, int width, int height) {
@@ -177,8 +241,8 @@ public class RuffiniView extends View {
         }
     }
 
-    ArrayList<ArrayList<String>> getTable() {
-        return table;
+    String getResult() {
+        return result;
     }
 
     void setItem(int x, int y, String value) {
@@ -191,5 +255,13 @@ public class RuffiniView extends View {
 
     void setItem(int x, int y, Fraction value) {
         setItem(x, y, value.toString());
+    }
+
+    String getItem(int x, int y) {
+        return table.get(x).get(y);
+    }
+
+    String getRes(int id) {
+        return getResources().getString(id);
     }
 }

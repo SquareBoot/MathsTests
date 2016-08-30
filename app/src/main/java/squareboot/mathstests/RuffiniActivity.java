@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class RuffiniActivity extends AppCompatActivity {
 
     public static final String TAG = "Maths - ";
 
-    // ruffiniViews list:
+    // ruffiniViews ArrayList:
     // 0 = Zero_Ruffini
     // 1 = First_monomial_Ruffini
     // 2 = Second_monomial_Ruffini
@@ -23,8 +24,10 @@ public class RuffiniActivity extends AppCompatActivity {
     // 5 = Fifth_monomial_Ruffini
     // 6 = Sixth_monomial_Ruffini
     // 7 = PolynomialZeroRuffini
-
+    // 8 = ResultRuffini
     ArrayList<EditText> ruffiniViews = new ArrayList<>();
+    TextView zeroView;
+    TextView resultView;
 
     @Override
     @SuppressWarnings("all")
@@ -47,7 +50,8 @@ public class RuffiniActivity extends AppCompatActivity {
         ruffiniViews.add((EditText) findViewById(R.id.Fourth_monomial_Ruffini));
         ruffiniViews.add((EditText) findViewById(R.id.Fifth_monomial_Ruffini));
         ruffiniViews.add((EditText) findViewById(R.id.Sixth_monomial_Ruffini));
-        ruffiniViews.add((EditText) findViewById(R.id.PolynomialZeroRuffini));
+        zeroView = (TextView) findViewById(R.id.PolynomialZeroRuffini);
+        resultView = (TextView) findViewById(R.id.ResultRuffini);
     }
 
     @Override
@@ -73,7 +77,6 @@ public class RuffiniActivity extends AppCompatActivity {
                 maxDividers = MoreMaths.findDividers(getEditTextValue(6), "maxDividers");
                 Log.e(TAG + "grade", "6");
                 grade = 6;
-
 
             } else if (!isEmpty(5)) {
                 maxDividers = MoreMaths.findDividers(getEditTextValue(5), "maxDividers");
@@ -191,18 +194,20 @@ public class RuffiniActivity extends AppCompatActivity {
                         }
 
                         default: {
-                            throw (new PolynomialGradeException());
+                            throw (new NullPointerException("Fatal error: invalid polynomial!"));
                         }
                     }
                     Log.e(TAG + "result", currentResult.toString());
 
                     if (currentResult.isZero()) {
-                        ruffiniViews.get(7).setText(temp.toString());
+                        zeroView.setText(temp.toString());
                         Toast.makeText(this, "Zero found.", Toast.LENGTH_SHORT).show();
                         Log.e(TAG + "factorizing", "Zero found: " + temp.toString());
 
                         RuffiniView table = (RuffiniView) findViewById(R.id.ruffini_table);
                         table.setEntries(temp, polynomial);
+
+                        resultView.setText(table.getResult());
 
                         return;
                     }
