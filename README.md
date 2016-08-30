@@ -3,7 +3,7 @@ MathsTests is an Open-source app wich can help you factorizing polynomials.
 
 ##Supported:
 - Trinomail factoring;
-- Ruffini's rule (work in progress, now only the polynomail zero can be found correctly);
+- Ruffini's rule (work in progress, now only the polynomail zero and the table works correctly, result is not accurate);
 - Fraction calculator.
 
 ###Extras:
