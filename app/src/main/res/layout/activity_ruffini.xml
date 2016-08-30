@@ -216,7 +216,8 @@
                 android:paddingRight="10dp"
                 android:text="Zero:"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:paddingBottom="4dp" />
 
             <TextView
                 android:id="@+id/PolynomialZeroRuffini"
@@ -248,7 +249,7 @@
                     <squareboot.mathstests.RuffiniView
                         android:id="@+id/ruffini_table"
                         android:layout_width="600dp"
-                        android:layout_height="200dp" />
+                        android:layout_height="180dp" />
 
                     <TextView
                         android:id="@+id/ResultLabelRuffini"
@@ -260,7 +261,8 @@
                         android:paddingRight="10dp"
                         android:text="Result:"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@android:color/black"
+                        android:paddingBottom="4dp" />
 
                     <TextView
                         android:id="@+id/ResultRuffini"

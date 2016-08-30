@@ -21,9 +21,9 @@ public class RuffiniView extends View {
     final int TEXT_SIZE = 40;
 
     final int CELL_WIDTH = 100;
-    final int CELL_HEIGHT = 80;
-    final int CELL_SPACE = 30;
-    final int PADDING = 50;
+    final int CELL_HEIGHT = 70;
+    final int CELL_SPACE = 20;
+    final int PADDING = 40;
 
     /*  Ruffini's rule table rectangles:
     *
@@ -147,7 +147,7 @@ public class RuffiniView extends View {
                 result = result + " + " + zero.toString().replace("-", "") + ")";
 
             } else {
-                result = result + " + " + zero.toString()  + ")";
+                result = result + " - " + zero.toString()  + ")";
             }
 
             invalidate();
