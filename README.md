@@ -1,5 +1,5 @@
 # MathsTests
-MathsTests is an Open-source app wich can help you factorizing polynomials.
+MathsTests is an Open-source app which can help you factorizing polynomials.
 
 ##Supported:
 - Trinomail factoring;
