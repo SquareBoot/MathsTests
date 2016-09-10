@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,8 +23,6 @@ public class RuffiniActivity extends AppCompatActivity {
     // 4 = Fourth_monomial_Ruffini
     // 5 = Fifth_monomial_Ruffini
     // 6 = Sixth_monomial_Ruffini
-    // 7 = PolynomialZeroRuffini
-    // 8 = ResultRuffini
     ArrayList<EditText> ruffiniViews = new ArrayList<>();
     TextView zeroView;
     TextView resultView;
@@ -248,8 +244,10 @@ public class RuffiniActivity extends AppCompatActivity {
     }
 
     public void clearRuffini(View v) {
-        for (int index = 0; index <= 7; index++) {
+        for (int index = 0; index <= 6; index++) {
             ruffiniViews.get(index).setText("");
         }
+        resultView.setText("");
+        zeroView.setText("");
     }
 }
