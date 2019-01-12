@@ -1,16 +1,6 @@
 # MathsTests
-MathsTests is an Open-source app that can help you factorizing polynomials.
-
+Don’t you think that maths is hard? You’re right, but I love it. That’s why I made this app: MathsTests can help you factorizing polynomials and particular trinomials using Ruffini’s rule! Fast, lightweight and open-source, it’s a great app for everyone who needs help with polynomials. I’m not in charge if you take a bad mark after using it during a test!
 ## Supported:
-- Trinomail factoring;
-- Ruffini's rule;
-
-### Extras:
-- Material design (AppCompat & support library);
-- Easter egg :-)
-
-## Easter egg FAQ
-<b>Where is the easter egg?</b>
-Ahahah! This is a mistery!
-<br><b>How can I win?</b> This easter egg is a small game. You can click only the <i>right</i> numbers, or the app will crash. If the number displayed is not <i>right</i>, click outside it.
-<br><b>Which numbers are <i>right</i>?</b> Eh, that's a big question.
+- Trinomail factoring
+- Ruffini's rule solver
+- Material design
