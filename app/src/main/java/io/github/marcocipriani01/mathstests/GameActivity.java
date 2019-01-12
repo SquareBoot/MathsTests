@@ -1,4 +1,4 @@
-package squareboot.mathstests;
+package io.github.marcocipriani01.mathstests;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,6 +1,7 @@
-package squareboot.mathstests;
+package io.github.marcocipriani01.mathstests;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,19 +29,14 @@ public class RuffiniActivity extends AppCompatActivity {
     TextView resultView;
 
     @Override
-    @SuppressWarnings("all")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ruffini);
-
-        try {
-            //Back button
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        } catch (Exception e) {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(true);
         }
-
         //Views
         ruffiniViews.add((EditText) findViewById(R.id.Zero_Ruffini));
         ruffiniViews.add((EditText) findViewById(R.id.First_monomial_Ruffini));
@@ -49,8 +45,8 @@ public class RuffiniActivity extends AppCompatActivity {
         ruffiniViews.add((EditText) findViewById(R.id.Fourth_monomial_Ruffini));
         ruffiniViews.add((EditText) findViewById(R.id.Fifth_monomial_Ruffini));
         ruffiniViews.add((EditText) findViewById(R.id.Sixth_monomial_Ruffini));
-        zeroView = (TextView) findViewById(R.id.PolynomialZeroRuffini);
-        resultView = (TextView) findViewById(R.id.ResultRuffini);
+        zeroView = findViewById(R.id.PolynomialZeroRuffini);
+        resultView = findViewById(R.id.ResultRuffini);
     }
 
     @Override
@@ -203,7 +199,7 @@ public class RuffiniActivity extends AppCompatActivity {
                         Toast.makeText(this, "Zero found.", Toast.LENGTH_SHORT).show();
                         Log.e(TAG + "factorizing", "Zero found: " + temp.toString());
 
-                        RuffiniView table = (RuffiniView) findViewById(R.id.ruffini_table);
+                        RuffiniView table = findViewById(R.id.ruffini_table);
                         table.setEntries(temp, polynomial);
 
                         resultView.setText(table.getResult());

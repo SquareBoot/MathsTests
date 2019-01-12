@@ -1,4 +1,4 @@
-package squareboot.mathstests;
+package io.github.marcocipriani01.mathstests;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,22 +26,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TrinomialFactoringActivity.class);
         startActivity(intent);
     }
+
     public void ruffini(View v) {
         Intent intent = new Intent(this, RuffiniActivity.class);
         startActivity(intent);
     }
-    public void fractions(View v) {
-        Intent intent = new Intent(this, FractionsActivity.class);
-        startActivity(intent);
-    }
 
     public void startGame(View v) {
-        if (!getSetting("Egg_unlocked", false)) {
+        if (!getSetting()) {
             if (clickCount != 7) {
                 clickCount++;
 
             } else {
-                editSettings("Egg_unlocked", true);
+                editSettings();
                 Toast.makeText(this, "Easter egg unlocked!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, GameActivity.class);
                 startActivity(intent);
@@ -53,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    void editSettings(String tag, boolean value) {
+    void editSettings() {
         preferencesEditor = preferences.edit();
-        preferencesEditor.putBoolean(tag, value);
+        preferencesEditor.putBoolean("Egg_unlocked", true);
         preferencesEditor.apply();
     }
-    boolean getSetting(String tag, boolean defValue) {
-        return preferences.getBoolean(tag, defValue);
+
+    boolean getSetting() {
+        return preferences.getBoolean("Egg_unlocked", false);
     }
 }

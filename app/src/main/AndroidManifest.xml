@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="squareboot.mathstests">
+    package="io.github.marcocipriani01.mathstests">
 
     <application
         android:allowBackup="true"
@@ -10,32 +10,29 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name="io.github.marcocipriani01.mathstests.MainActivity"
             android:theme="@style/Theme.AppCompat.Dialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".TrinomialFactoringActivity"
+            android:name="io.github.marcocipriani01.mathstests.TrinomialFactoringActivity"
             android:label="Trinomial factoring" />
 
         <activity
-            android:name=".RuffiniActivity"
+            android:name="io.github.marcocipriani01.mathstests.RuffiniActivity"
             android:label="Ruffini's rule" />
 
         <activity
-            android:name=".FractionsActivity"
-            android:label="Fractions" />
-
-        <activity android:name=".GameActivity"
+            android:name="io.github.marcocipriani01.mathstests.GameActivity"
             android:label="Easter egg"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"
             android:screenOrientation="locked"
-            />
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
     </application>
 
 </manifest>

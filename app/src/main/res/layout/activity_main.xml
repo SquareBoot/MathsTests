@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="squareboot.mathstests.MainActivity">
+    tools:context="io.github.marcocipriani01.mathstests.MainActivity">
 
     <Button
         android:layout_width="wrap_content"
@@ -33,19 +33,19 @@
         android:layout_alignParentStart="true" />
 
     <TextView
+        android:id="@+id/AboutText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="App by SquareBoot.\nCC BY-SA"
-        android:id="@+id/AboutText"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/orange_fade"
-        android:padding="8dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
-        android:onClick="startGame" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/orange_fade"
+        android:onClick="startGame"
+        android:padding="8dp"
+        android:text="App by Maraco Cipriani\nLicense: Apache 2.0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:layout_width="wrap_content"
@@ -54,18 +54,6 @@
         android:text="Ruffini&apos;s rule"
         android:onClick="ruffini"
         android:layout_below="@+id/TrinomialFactoringButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:id="@+id/FractionsButton"
-        android:text="Fractions"
-        android:onClick="fractions"
-        android:layout_below="@+id/RuffiniButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"

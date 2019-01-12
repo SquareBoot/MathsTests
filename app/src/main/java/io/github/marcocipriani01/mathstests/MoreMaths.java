@@ -1,4 +1,4 @@
-package squareboot.mathstests;
+package io.github.marcocipriani01.mathstests;
 
 import android.util.Log;
 

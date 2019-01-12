@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="squareboot.mathstests.RuffiniActivity">
+    tools:context="io.github.marcocipriani01.mathstests.RuffiniActivity">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/ClearRuffini"
@@ -246,7 +246,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <squareboot.mathstests.RuffiniView
+                    <io.github.marcocipriani01.mathstests.RuffiniView
                         android:id="@+id/ruffini_table"
                         android:layout_width="600dp"
                         android:layout_height="180dp" />
